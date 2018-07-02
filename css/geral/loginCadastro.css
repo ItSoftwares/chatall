@@ -1,0 +1,143 @@
+body {
+	/*background: var(--cor2);*/
+}
+
+body * {
+	font-family: quicksand;
+}
+
+#centro {
+	min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--corPrincipal);
+}
+
+#logo {
+	width: 80px;
+	margin-bottom: 60px;
+	display: block;
+}
+
+#titulo {
+    color: white;
+    font-family: shadows into light;
+    font-weight: normal;
+    font-size: 5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    margin-bottom: 30px;
+    cursor: default;
+    user-select: none;;
+}
+
+form {
+	width: 350px;
+}
+
+form h2 {
+    color: white;
+    font-family: encode sans;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    display: none;
+}
+
+input {
+	padding: 14px 20px;
+	border-radius: 3px;
+	width: 100%;
+	margin-bottom: 10px;
+	font-weight: bold;
+	background: rgba(0,0,0,.3);
+	box-sizing: border-box;
+	color: white;
+}
+
+input:focus {
+	background: rgba(255,255,255,.95);
+    color: var(--corPrincipal);
+    box-shadow: 0 0 5px rgba(0,0,0,.35);
+    /*filter: dr*/
+}
+
+input::placeholder {
+	color: var(--corPrincipal);
+}
+
+input:focus::placeholder {
+	color: var(--corPrincipal);
+}
+
+input:nth-child(even) {
+	/*border-radius: 10px 10px 10px 0;*/
+	/*width: 90%;*/
+}
+
+input:nth-child(odd) {
+	/*border-radius: 10px 10px 0 10px;*/
+	float: ri/*g*/ht;
+	/*text-align: right;*/
+}
+
+button {
+	/*width: 100%;*/
+	box-sizing: border-box;
+	padding: 14px 20px;
+	border-radius: 3px;
+	background: white;
+	font-weight: bold;
+	color: var(--corPrincipal);
+	margin-top: 10px;
+	cursor: pointer;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+}
+
+button i {
+	margin-left: 10px;
+}
+
+button:hover {
+	box-shadow: 0 2px 5px rgba(0,0,0,.3)
+}
+
+form > span {
+	margin-top: 15px;
+    display: block;
+    font-size: .8em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    cursor: pointer;
+    border-top: 1px dashed rgba(0,0,0,.3);
+    padding-top: 10px;
+}
+
+form > a {
+	margin-top: 25px !important;
+	cursor: pointer
+}
+
+form > p, form > a {
+    margin-top: 17px;
+    font-size: .75em;
+    color: white;
+    text-align: left;
+    cursor: default;
+    display: block;
+    text-decoration: none;
+    float: left;
+    width: 59%
+}
+
+#ir-cadastro {
+	text-align: right;
+}
+
+#cadastro {
+	display: none;
+}

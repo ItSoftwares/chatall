@@ -1,0 +1,11 @@
+RewriteEngine On
+#RewriteBase /
+
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+
+##ErrorDocument 404 /anuncio/404.php
+RewriteRule ^login?$ login.php
+RewriteRule ^room?$ paginas/chat.php
+RewriteRule ^room2?$ paginas/chat2.php
+RewriteRule ^projetos?$ paginas/projetos.php
