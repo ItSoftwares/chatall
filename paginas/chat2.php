@@ -16,6 +16,10 @@
 	</head>
 	
 	<body>
+		<div id="loading">
+			<div class="lds-dual-ring"></div>
+		</div>
+
 		<div id="centro">
 			<aside id="contatos">
 				<!-- <div id="busca" class="aberto">
@@ -130,8 +134,22 @@
 						<li class="mensagem"><header>Nome do usuário</header><article>Outra Mensagem</article></li>
 					</ul>
 
+					<p class="aviso">Fulano acabou de entrar</p>
+
 					<ul class="outra">
 						<li class="mensagem"><header>Nome do usuário</header><img src="img/teste.jpg"><span class="data transition">10:25</span></li>
+						<li class="mensagem tarefa">
+							<header>Nome do usuário</header>
+							<div class="detalhes">
+								<div class="prazo">
+									<p class="dia">8</p>
+									<p class="mes">OUT</p>
+								</div>
+								<p class="conteudo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt...</p>
+								<img src="img/foto-padrao.jpg">
+							</div>
+						</li>
 					</ul>
 
 					<?
@@ -146,8 +164,8 @@
 				</div>
 			</section>
 
-			<aside id="direita" class="scroll">
-				<div id="tarefas">
+			<aside id="direita">
+				<div id="tarefas" class="scroll">
 					<? for ($i=0; $i < 2; $i++) {?>
 					<div class="coluna">
 						<h2>Minhas Tarefas <span>12 Tasks</span></h2>

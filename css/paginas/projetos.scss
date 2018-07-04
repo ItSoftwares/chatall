@@ -1,0 +1,261 @@
+// $corPrincipal: #3F51B5;
+// $corPrincipal: #009688;
+$corPrincipal: #2870A2;
+// $fundo1: #1D212A;
+$fundo1: #3d3d3d;
+$fundo2: #2b2b2b;
+$fundo3: #303030;
+$fundo4: #fafafa;
+$radius1: 6px;
+$radius2: 2px;
+
+* {
+	font-family: encode sans;
+
+	img {
+		width: 50px;
+	}
+}
+
+body {
+	background: $fundo4;
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 50px 30px;
+	box-sizing: border-box;
+}
+
+aside {
+	width: 300px;
+
+	#perfil {
+    	background: white;
+    	box-sizing: border-box;
+    	border-radius: $radius1;
+    	box-shadow: 0 0 5px rgba(0,0,0,.1);
+   	position: relative;
+		overflow: hidden;
+    
+		i#sair {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			z-index: 1;
+			color: white;
+			cursor: pointer;
+		}
+
+		span#edit {
+      	position: absolute;
+			// top: 10px;
+			// right: 10px;
+			// font-size: .8em;
+			// z-index: 1;
+			// color: white;
+			cursor: pointer;
+			bottom: -15px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 150px;
+			text-align: center;
+			font-weight: bold;
+			color: $corPrincipal;
+			background: white;
+			padding: 10px 0;
+			border-radius: 50px;
+			font-size: .8em;
+			text-transform: uppercase;
+			box-shadow: 0 0 25px rgba($corPrincipal, .5);
+		}
+
+		#superior {
+			background: $corPrincipal;
+			// background: linear-gradient(135deg, rgba(40,112,162,1) 0%, rgba(59,164,237,1) 100%);
+			position: relative;
+			padding: 50px 0 40px;
+			
+			img {
+				width: 80px;
+				display: table;
+				border-radius: 50px;
+				margin: auto;
+				box-shadow: 0 0 10px rgba(0,0,0,.4);
+			}
+		}
+
+		h3 {
+			text-align: center;
+			color: white;
+			// text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+			font-size: 1em;
+			font-weight: bold;
+			padding: 10px 0 15px;
+			margin: 0;
+		}
+
+		#redes {
+			list-style: none;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			padding: 0;
+			
+			li {
+				margin: 0 15px;
+				opacity: .85;
+				
+				a {
+					color: white;
+					
+					i {
+						font-size: .8em
+					}
+				}
+			}
+		}
+
+		p#descricao {
+			width: 80%;
+			font-size: .8em;
+			color: white;
+			text-align: center;
+			margin: auto;
+			display: none;
+		}
+
+		#resumo {
+			list-style: none;
+			padding: 0;
+			margin-top: 20px;
+			
+			li {
+				color: rgba(0,0,0,.7);
+				padding: 10px;
+				text-align: right;
+				font-size: .9em;
+				&:before {
+					content: attr(data-titulo);
+					float: left;
+					font-weight: bold;
+				}
+				
+				&:not(:last-child) {
+					border-bottom: 1px dashed rgba(0,0,0,.15);
+				}
+			}
+		}
+	}
+}
+
+#projetos {
+	width: calc(100% - 330px);
+	
+	section {
+		h1 {
+			margin: 0 0 15px;
+			font-size: 1.2em;
+		}
+		
+		ul {
+			padding: 0;
+			list-style: none;
+			
+			.projeto {
+				padding: 10px;
+				padding-top: 100px;
+				border-radius: $radius1;
+				background: white;
+				box-shadow: 0 0 5px rgba(0,0,0,.1);
+				width: 180px;
+				position: relative;
+				
+				img {
+					position: absolute;
+					top: 10px;
+					left: 10px;
+					width: 35px;
+					border-radius: 10px;
+				}
+				
+				.menu {
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					color: rgba(0,0,0,.6);
+					width: 30px;
+					height: 30px;
+					border-radius: 50px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					cursor: pointer;
+					
+					&:hover {
+						color: white;
+						background: $corPrincipal;
+					}
+				}
+				
+				p.mensagens {
+					margin: 0 0 5px;
+					font-size: .8em;
+					font-weight: bold;
+					// color: rgba(0,0,0,.5);
+					position: absolute;
+					right: 10px;
+					bottom: 13px;
+					// display: table;
+					// color: white;
+					// background: $corPrincipal;
+					// padding: 5px 10px;
+					// border-radius: 5px;
+					
+					i {
+						// margin-right: 5px;
+						color: $corPrincipal;
+					}
+					
+					span {
+						
+					}
+				}
+
+				.tasks {
+					font-size: .8em;
+					color: rgba(0,0,0,.7);
+				}
+				
+				h2.titulo {
+					margin: 0;
+					font-size: 1.1em;
+				}
+
+				.porcentagem {
+					
+					
+					span.valor {
+						margin: 15px 0 5px;
+						font-size: .8em;
+						font-weight: bold;
+						display: block;
+					}
+
+					.barra {
+						width: 100%;
+						height: 3px;
+						background: darken($fundo4, 10%);
+						.barra-concluido {
+							height: inherit; 
+							width: 35%;
+							background: $corPrincipal;
+						}
+					}
+				}
+			}	
+		}
+	}
+}
